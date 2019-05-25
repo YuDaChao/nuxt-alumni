@@ -140,7 +140,7 @@ export default {
       padding: 0 20px 0 20px;
       min-height: 110px;
       .detail-title {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         margin: 0 0 15px;
         color: #333;
@@ -148,6 +148,7 @@ export default {
       .detail-except {
         text-align: center;
         color: #929292;
+        font-size: 14px
       }
     }
     .card-meta {

@@ -117,7 +117,7 @@ export default {
         line-height: 1.5;
         color: #1b1b1b;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
