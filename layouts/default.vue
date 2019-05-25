@@ -8,16 +8,20 @@
         <nuxt />
       </div>
     </el-main>
-    <el-footer>Footer</el-footer>
+    <el-footer>
+      <v-footer></v-footer>
+    </el-footer>
   </el-container>
 </template>
 
 <script>
 import VHeader from '@/components/header'
+import VFooter from '@/components/footer'
 export default {
   name: 'default',
   components: {
-    VHeader
+    VHeader,
+    VFooter
   }
 }
 </script>
@@ -28,6 +32,9 @@ export default {
   background-color: #ffffff;
   box-shadow: 0 2px 27px 0 rgba(0,0,0,.1);
   z-index: 10
+}
+.el-footer {
+  padding: 0;
 }
 .el-main-wrapper {
   padding: 0

@@ -29,6 +29,7 @@ module.exports = {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
+    'aos/dist/aos.css',
     '@/assets/css/reset.css',
   ],
 
@@ -36,7 +37,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    { src: '@/plugins/aos.js', ssr: false }
   ],
 
   /*

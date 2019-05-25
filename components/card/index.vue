@@ -2,7 +2,7 @@
   <div class="card-wrapper">
     <div class="card-content">
       <div class="card-media">
-        <img width="300px" height="200px" src="https://onestore.oceanwp.org/wp-content/uploads/2018/12/img10-300x200.jpeg" />
+        <div class="img" :style="bgImgStyle"></div>
         <a href="#" class="author-link">
           <img src="https://secure.gravatar.com/avatar/3fcda04acc4367da1ee607997c762123?s=100&d=mm&r=g" />
         </a>
@@ -11,8 +11,18 @@
         </span>
       </div>
       <div class="card-detail">
-        <h2 class="detail-title">Donec diam libero auctor</h2>
-        <div class="detail-except"> Integer pulvinar at eros at faucibus. In auctor nec quam sit amet convallis. Donec dapibus…</div>
+        <h2 class="detail-title">{{ title }}</h2>
+        <div class="detail-except">{{ desc }}</div>
+      </div>
+      <div class="card-meta">
+        <div class="meta-item">
+          <i class="el-icon-location-information"></i>
+          <span class="author">{{ author }} / {{ address }}</span>
+        </div>
+        <div class="meta-item">
+          <i class="el-icon-time"></i>
+          <span>{{ time }}前</span>
+        </div>
       </div>
     </div>
   </div>
@@ -21,10 +31,32 @@
 <script>
 export default {
   name: 'card',
-  data(){
-   return {
-
-   }
+  props: {
+    imgUrl: {
+      type: String,
+    },
+    title: {
+      type: String
+    },
+    desc: {
+      type: String
+    },
+    author: {
+      type: String
+    },
+    address: {
+      type: String
+    },
+    time: {
+      type: String
+    }
+  },
+  computed: {
+    bgImgStyle () {
+      return {
+        backgroundImage: `url(${this.imgUrl})`
+      }
+    }
   }
 }
 </script>
@@ -39,10 +71,12 @@ export default {
     .card-media {
       position: relative;
       margin-bottom: 45px;
-      img {
+      .img {
         width: 100%;
         max-width: 100%;
-        height: auto;
+        height: 235px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
       }
       .author-link {
         position: absolute;
@@ -114,14 +148,16 @@ export default {
       .detail-except {
         text-align: center;
         color: #929292;
-        &::after {
-          content: '';
-          display: block;
-          visibility: hidden;
-          clear: both;
-          zoom: 1;
-          height: 0;
-        }
+      }
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f9f9f9;
+      padding: 10px 20px;
+      .meta-item {
+        color: #aaa;
+        font-size: 13px;
       }
     }
   }
