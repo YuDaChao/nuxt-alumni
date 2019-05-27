@@ -1,16 +1,16 @@
 <template>
   <el-carousel :interval="5000" height="410px">
     <el-carousel-item>
-      <img class="img" src="~assets/images/banner/b1.jpg" />
+      <img class="img" src="http://www1.hbuas.edu.cn/images/456.jpg" />
     </el-carousel-item>
     <el-carousel-item>
-      <img class="img" src="~assets/images/banner/b2.jpg" />
+      <img class="img" src="http://www1.hbuas.edu.cn/20190321.jpg" />
     </el-carousel-item>
     <el-carousel-item>
-      <img class="img" src="~assets/images/banner/b3.jpg" />
+      <img class="img" src="http://www1.hbuas.edu.cn/images/20180913112456.jpg" />
     </el-carousel-item>
     <el-carousel-item>
-      <img class="img" src="~assets/images/banner/b4.jpg" />
+      <img class="img" src="http://www1.hbuas.edu.cn/dfiles/12817/news/2017/p041.jpg" />
     </el-carousel-item>
   </el-carousel>
 </template>

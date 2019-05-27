@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header :style="headerStyle">
       <v-header></v-header>
     </el-header>
     <el-main class="el-main-wrapper">
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 import VHeader from '@/components/header'
 import VFooter from '@/components/footer'
 export default {
@@ -22,6 +23,43 @@ export default {
   components: {
     VHeader,
     VFooter
+  },
+  computed: {
+    ...mapState({
+      position: state => state.nav.position,
+      backgroundColor: state => state.nav.backgroundColor,
+      menuHeight: state => state.nav.menuHeight,
+    }),
+    headerStyle () {
+      return {
+        position: this.position,
+        backgroundColor: this.backgroundColor,
+        height: `${this.menuHeight}px`
+      }
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  methods: {
+    ...mapMutations({
+      changePosition: 'nav/changePosition',
+      changeBackgroundColor: 'nav/changeBackgroundColor',
+      changeMenuHeight: 'nav/changeMenuHeight'
+    }),
+    handleScroll (e) {
+      const scrollTop = e.target.documentElement.scrollTop || e.target.body.scrollTop
+      if (scrollTop > 0 && this.position !== 'fixed') {
+        this.changePosition('fixed')
+        this.changeBackgroundColor('#ffffff')
+        this.changeMenuHeight(60)
+      }
+      if (scrollTop === 0) {
+        this.changePosition('absolute')
+        this.changeBackgroundColor('#58585840')
+        this.changeMenuHeight(74)
+      }
+    }
   }
 }
 </script>
@@ -29,9 +67,14 @@ export default {
 
 <style lang="scss" scoped>
 .el-header {
-  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #58585840;
   box-shadow: 0 2px 27px 0 rgba(0,0,0,.1);
-  z-index: 10
+  z-index: 10;
+  transition: all .3s ease-in-out
 }
 .el-footer {
   padding: 0;

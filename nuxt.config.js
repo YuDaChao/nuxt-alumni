@@ -1,5 +1,11 @@
 const pkg = require('./package')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/<repository-name>/'
+  }
+} : {}
+
 
 module.exports = {
   mode: 'universal',
@@ -38,7 +44,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
-    { src: '@/plugins/aos.js', ssr: false }
+    { src: '@/plugins/aos.js', ssr: false },
+    { src: '@/plugins/echarts.js', ssr: false }
   ],
 
   /*
@@ -56,12 +63,15 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
+  router: {
+    ...routerBase
+  },
+
   /*
   ** Build configuration
   */
   build: {
-    transpile: [/^element-ui/],
-    
+    transpile: [/^element-ui/, 'vue-echarts', 'resize-detector'],
     /*
     ** You can extend webpack config here
     */

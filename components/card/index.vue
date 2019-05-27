@@ -16,7 +16,7 @@
       </div>
       <div class="card-meta">
         <div class="meta-item">
-          <i class="el-icon-location-information"></i>
+          <i class="el-icon-share"></i>
           <span class="author">{{ author }} / {{ address }}</span>
         </div>
         <div class="meta-item">
