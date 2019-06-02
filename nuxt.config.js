@@ -6,7 +6,6 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
-
 module.exports = {
   mode: 'universal',
 
@@ -36,7 +35,7 @@ module.exports = {
   css: [
     'element-ui/lib/theme-chalk/index.css',
     'aos/dist/aos.css',
-    '@/assets/css/reset.css',
+    '@/assets/css/reset.css'
   ],
 
   /*
@@ -54,7 +53,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
@@ -75,7 +74,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, { isClient }) {
+    extend (config, { isClient }) {
       if (isClient) {
         config.module.rules.push(
           {
@@ -84,7 +83,7 @@ module.exports = {
             loader: 'eslint-loader',
             exclude: /(node_modules)/,
             options: {
-                formatter: require('eslint-friendly-formatter')
+              formatter: require('eslint-friendly-formatter')
             }
           }
         )

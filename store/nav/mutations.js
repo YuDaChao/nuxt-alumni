@@ -1,11 +1,11 @@
 export default {
-  changePosition(state, position) {
+  changePosition (state, position) {
     state.position = position
   },
-  changeBackgroundColor(state, bgColor) {
+  changeBackgroundColor (state, bgColor) {
     state.backgroundColor = bgColor
   },
-  changeMenuHeight(state, height) {
+  changeMenuHeight (state, height) {
     state.menuHeight = height
   }
 }

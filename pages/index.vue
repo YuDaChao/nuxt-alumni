@@ -47,12 +47,12 @@ export default {
         { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-159984.jpeg', desc: '这是一段描述' },
         { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/st-petersburg-russia-nonoj-petersburg-evening-city-our-savior-on-the-blood.jpg', desc: '这是一段描述' },
         { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-1074920.jpeg', desc: '这是一段描述' },
-        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-159984.jpeg', desc: '这是一段描述' },
+        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-159984.jpeg', desc: '这是一段描述' }
       ],
       news: [
-        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-221446-300x200.jpeg', title: '漂亮小姐姐在画画', desc: '这是一段非常优美的描述', author: '张梓淇', address: '北京', time: '23分钟'},
-        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-1802241-300x200.jpeg', title: '一对帅哥美女', desc: '这是一段非常优美的描述', author: '王美丽', address: '澳门', time: '2天'},
-        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-714644-300x200.jpeg', title: '乐山大佛一日游', desc: '这是一段非常优美的描述这是一段非常优美的描述', author: '李晓慧', address: '佛山', time: '2小时'}
+        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-221446-300x200.jpeg', title: '漂亮小姐姐在画画', desc: '这是一段非常优美的描述', author: '张梓淇', address: '北京', time: '23分钟' },
+        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-1802241-300x200.jpeg', title: '一对帅哥美女', desc: '这是一段非常优美的描述', author: '王美丽', address: '澳门', time: '2天' },
+        { imgUrl: 'https://lauren.oceanwp.org/wp-content/uploads/2018/12/pexels-photo-714644-300x200.jpeg', title: '乐山大佛一日游', desc: '这是一段非常优美的描述这是一段非常优美的描述', author: '李晓慧', address: '佛山', time: '2小时' }
       ]
     }
   }

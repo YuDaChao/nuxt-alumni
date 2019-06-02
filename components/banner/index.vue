@@ -17,10 +17,7 @@
 
 <script>
 export default {
-  name: 'banner',
-  data () {
-   return {}
-  }
+  name: 'banner'
 }
 </script>
 

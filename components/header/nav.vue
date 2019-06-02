@@ -19,9 +19,9 @@
 export default {
   name: 'v-nav',
   data () {
-   return {
-     activeIndex: this.$route.path || '/'
-   }
+    return {
+      activeIndex: this.$route.path || '/'
+    }
   }
 }
 </script>

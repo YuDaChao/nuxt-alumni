@@ -13,11 +13,6 @@ export default {
   components: {
     VNav,
     VLogo
-  },
-  data(){
-   return {
-
-   }
   }
 }
 </script>

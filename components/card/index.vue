@@ -33,7 +33,7 @@ export default {
   name: 'card',
   props: {
     imgUrl: {
-      type: String,
+      type: String
     },
     title: {
       type: String

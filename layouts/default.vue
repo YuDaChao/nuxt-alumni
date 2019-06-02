@@ -28,7 +28,7 @@ export default {
     ...mapState({
       position: state => state.nav.position,
       backgroundColor: state => state.nav.backgroundColor,
-      menuHeight: state => state.nav.menuHeight,
+      menuHeight: state => state.nav.menuHeight
     }),
     headerStyle () {
       return {
@@ -63,7 +63,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .el-header {

@@ -22,7 +22,7 @@ export default {
   name: 'portfolio',
   props: {
     imgUrl: {
-      type: String,
+      type: String
     },
     desc: {
       type: String
