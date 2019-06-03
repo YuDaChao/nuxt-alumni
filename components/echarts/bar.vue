@@ -3,7 +3,7 @@
 </template>
 
 <script>
-	import Echarts from 'vue-echarts/components/ECharts.vue'
+import Echarts from 'vue-echarts/components/ECharts.vue'
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/title'

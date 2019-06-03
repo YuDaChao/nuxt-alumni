@@ -48,16 +48,18 @@ export default {
       changeMenuHeight: 'nav/changeMenuHeight'
     }),
     handleScroll (e) {
-      const scrollTop = e.target.documentElement.scrollTop || e.target.body.scrollTop
-      if (scrollTop > 0 && this.position !== 'fixed') {
-        this.changePosition('fixed')
-        this.changeBackgroundColor('#ffffff')
-        this.changeMenuHeight(60)
-      }
-      if (scrollTop === 0) {
-        this.changePosition('absolute')
-        this.changeBackgroundColor('#58585840')
-        this.changeMenuHeight(74)
+      if (process.client) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        if (scrollTop > 0 && this.position !== 'fixed') {
+          this.changePosition('fixed')
+          this.changeBackgroundColor('#ffffff')
+          this.changeMenuHeight(60)
+        }
+        if (scrollTop === 0) {
+          this.changePosition('absolute')
+          this.changeBackgroundColor('#58585840')
+          this.changeMenuHeight(74)
+        }
       }
     }
   }
@@ -84,5 +86,6 @@ export default {
 .main-content {
   min-height: calc(100vh - 120px);
   margin: 0 auto;
+  background-color: #fff;
 }
 </style>
