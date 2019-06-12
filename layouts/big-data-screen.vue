@@ -24,7 +24,7 @@ html, body {
   height: 100%;
   min-height: 635px;
   font-family: "microsoft yahei", arial, sans-serif;
-  background-color: #0f1c30;
+  background-color: #f5f5f5;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
